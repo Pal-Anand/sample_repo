@@ -25,7 +25,35 @@ Note: The Status for the working directory needs to be changed from untracked to
 	e.g.: git rm --cached a1.txt
 12) git rm --cached . -r : UnStage all the files in the working directory from stage area.
 13) git rm --cached <folderName> -r: to remove entire folder from the bunch of folder's from stage area back to working directory.
-	e.g.:
-		project folder/a/example.txt -> a/ folder with some files in it.
+	e.g.:	project folder/a/example.txt -> a/ folder with some files in it.
 		git rm --cached "a/" -r 
-14) 
+14) git add <file>: if there is update in any file and needs to be added from cwd to stage area.
+	e.g.: 	git add git_DOC/GIT_Commands.txt
+15) git restore <file>: to discard changes in working directory back and get the previous version of file back.
+	e.g.: 	git restore a1.txt
+16) git commit -m <message>: this will commit all the files from stage area to local repository. Also the file names from the status is removed after commit to local repository. All files from stage area will be removed and moved to local repository.
+	e.g.: 	git commit -m "second commit"
+17) git commit -m <message> <fileName>: This will commit the single file that is required. Also the file name from the status is removed after commit to local repository.
+	e.g.:	git commit -m "first commit" a1.txt
+======================================================================================================
+For new repository:
+-------------------------
+18) git branch -M main : set the branch to main from master in git local
+19) git git remote add origin <new repo url>: set the GitHub repo path in which the push needs to happen.
+	e.g.: 	git remote add origin https://github.com/Pal-Anand/sample_repo.git
+20) git push -u origin main: push the files from local repository to remote repo.
+For existing repo:
+-----------------------
+18) git remote add origin <existing repo url>: set the GitHub repo path to local git in which the push needs to happen.
+	e.g.: 	git remote add origin https://github.com/Pal-Anand/sample_repo.git
+19) git branch -M main: set the branch to main from master in git local
+20) git push -u origin main: push the files from local repository to remote repo
+======================================================================================================
+21) git clone <repo url>: get the copy of project from the remote repo as it is to working directory.
+	e.g.: 	git clone https://github.com/Pal-Anand/sample_repo.git
+22) git pull: get the update in file from remote repo to working directory.
+23) git push: this will be done for those who have got the clone of the remote repo. For the client those who have got the clone and made any changes in the files then they have to execute the steps like:
+	git add <filename>
+	git commit -m <message>
+	git push
+
