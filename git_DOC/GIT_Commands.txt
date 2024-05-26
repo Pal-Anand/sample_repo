@@ -1,0 +1,31 @@
+1) git --version : gets the version of git
+2) git config --list : list the configuration of the git in the local machine
+3) git config --global --unset-all user.name: remove all the username from the local git config.
+4) git config --global --unset-all user.email: remove all the user email from the local git config.
+5) git config --global user.name "<user name>": sets the username to local git config.
+6) git config --global user.email "<user email>": sets the user email to local git config.
+7) git init: initialize	 the git to chosen folder creating .git folder.
+8) git status: check the status of the current working directory in which .git folder is created.
+	       If the status is untracked then the changes are still in working directory.
+
+	e.g.: 
+	Admin@LAPTOP-2DOUF6U9 MINGW64 /d/Workspace/AnandWorkSpace/Git_Session_01/WB_01 (master)
+	$ git status
+	On branch master
+	No commits yet
+	Untracked files:
+	  	(use "git add <file>..." to include in what will be committed)
+      	  	git_DOC/
+	nothing added to commit but untracked files present (use "git add" to track)
+Note: The Status for the working directory needs to be changed from untracked to tracked i.e., from working directory to stage area in git.
+
+9) git add . or git add --a : Add all the changes from working directory to stage area.
+10) git add <filename> : Adds the file from working directory to stage area.
+11) git rm --cached <file> : to unstage single file from stage area back to working directory.
+	e.g.: git rm --cached a1.txt
+12) git rm --cached . -r : UnStage all the files in the working directory from stage area.
+13) git rm --cached <folderName> -r: to remove entire folder from the bunch of folder's from stage area back to working directory.
+	e.g.:
+		project folder/a/example.txt -> a/ folder with some files in it.
+		git rm --cached "a/" -r 
+14) 
